@@ -7,12 +7,11 @@ public class Link : MonoBehaviour
 
 	public void OpenRepository()
 	{
-#if !UNITY_EDITOR
-		openWindow("https://github.com/Kekbabus/TestRepo");
-#endif
+
+		Application.OpenURL("https://github.com/Kekbabus/TestRepo");
+
 	}
 
-	[DllImport("__Internal")]
-	private static extern void openWindow(string url);
+
 
 }
